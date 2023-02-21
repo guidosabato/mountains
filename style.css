@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--main__color);
+}
+
+
+:root {
+    --main__color: white;
+    --second__color: rgb(158, 29, 104);
+    --thirds__color: black;
+    --fourth__color: rgb(255, 163, 213);
+}
+
+html {
+    background-color: var(--fourth__color);
+
+}
+
+body {
+    color: var(--main__color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.center__flex {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    background: url('mountains.avif') no-repeat center;
+    background-size: cover;
+}
+
+.header__nav {
+    padding: 10px;
+    gap: 10em;
+}
+
+.header__nav>div {
+    display: flex;
+    gap: 1em
+}
+
+.svg_login {
+    width: 20px;
+}
+
+.contenedor__colina {
+    position: relative;
+    bottom: 120px;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transform: translate3d(0px, -5.156%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+.colina {
+    width: 100%;
+    object-fit: contain;
+    clip-path: polygon(evenodd, 0% 72%, 36.48% 82.21%, 52.59% 82.86%, 68.88% 77.44%, 100% 72%, 100% 100%, 0% 100%);
+}
+
+.header__section {
+    position: fixed;
+    inset: 0;
+    width: 70%;  
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 70px; 
+}
+
+.linea {
+    width: 70px;
+    height: 2px;
+    border: 1px solid black;
+    align-self: center;
+}
