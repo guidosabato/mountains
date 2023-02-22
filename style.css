@@ -16,7 +16,7 @@ a {
 :root {
     --main__color: rgb(255, 255, 255);
     --second__color: rgb(189, 189, 189);
-    --thirds__color: rgb(255, 255, 255);
+    --thirds__color: rgb(244, 248, 24);
     --fourth__color: rgb(255, 255, 255);
 }
 
@@ -70,7 +70,7 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 10px;
-    font-size: .5em;
+    font-size: 1sem;
     color: var(--main__color);
 }
 
@@ -110,12 +110,18 @@ body {
     flex-direction: column;
     gap: 70px;
     color: var(--second__color);
+    font-size: 2em;
+
 }
 
 
 .linea {
     width: 30px;
     height: 2px;
-    border: 1px solid var(--main__color);
+    border: 1px solid var(--thirds__color);
     align-self: center;
+}
+
+.guide {
+    color: var(--thirds__color);
 }
