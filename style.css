@@ -14,10 +14,10 @@ a {
 
 
 :root {
-    --main__color: white;
-    --second__color: rgb(158, 29, 104);
-    --thirds__color: black;
-    --fourth__color: rgb(255, 163, 213);
+    --main__color: rgb(255, 255, 255);
+    --second__color: rgb(189, 189, 189);
+    --thirds__color: rgb(255, 255, 255);
+    --fourth__color: rgb(255, 255, 255);
 }
 
 html {
@@ -26,13 +26,13 @@ html {
 }
 
 body {
-    color: var(--main__color);
+
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .center__flex {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -40,60 +40,82 @@ body {
     display: flex;
 }
 
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
 .header {
-    position: absolute;
-    width: 100%;
-    height: 90vh;
-    perspective: 1px;
+    position: relative;
+    height: 100%;
     transform-style: preserve-3d;
-    background: url('mountains.avif') no-repeat center;
-    background-size: cover;
+    z-index: -1;
+    c
+}
+
+
+.background,
+.foreground,
+.cielo {
+    position: absolute;
+    z-index: -3;
+    width: 100%;
 }
 
 .header__nav {
+    position: absolute;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
     padding: 10px;
-    gap: 10em;
+    font-size: .4em;
+    color: var(--main__color);
 }
 
 .header__nav>div {
     display: flex;
-    gap: 1em
+    justify-content: center;
+    gap: 1em;
+}
+
+.cielo {
+    transform: translateZ(-20px) scale(3);
+    height: 100%;
+}
+
+.background {
+    transform: translateZ(-10px) scale(2);
+    height: 100%;
+    top: 180px;
+}
+
+.foreground {
+    transform: translateZ(-5px) scale(1.6);
+    top: 300px;
 }
 
 .svg_login {
-    width: 20px;
-}
-
-.contenedor__colina {
-    position: relative;
-    bottom: 120px;
-    transform-style: preserve-3d;
-    will-change: transform;
-    transform: translate3d(0px, -5.156%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-}
-
-.colina {
-    width: 100%;
-    object-fit: contain;
-    clip-path: polygon(evenodd, 0% 72%, 36.48% 82.21%, 52.59% 82.86%, 68.88% 77.44%, 100% 72%, 100% 100%, 0% 100%);
+    width: 10px;
+    fill: var(--main__color);
 }
 
 .header__section {
-    position: fixed;
-    inset: 0;
-    width: 70%;  
-    margin: 0 auto;
-    margin-top: 100px;
+    width: 70%;
+    min-width: 70vw;
+    margin: 0  auto;
     display: flex;
     justify-content: start;
     flex-direction: column;
-    gap: 70px; 
+    gap: 70px;
+    color: var(--second__color);
 }
 
+
 .linea {
-    width: 70px;
+    width: 30px;
     height: 2px;
-    border: 1px solid black;
+    border: 1px solid var(--main__color);
     align-self: center;
 }
