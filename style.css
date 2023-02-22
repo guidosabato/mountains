@@ -17,7 +17,7 @@ a {
     --main__color: rgb(255, 255, 255);
     --second__color: rgb(189, 189, 189);
     --thirds__color: rgb(244, 248, 24);
-    --fourth__color: rgb(255, 255, 255);
+    --fourth__color: rgb(5, 36, 48);
 }
 
 html {
@@ -52,7 +52,7 @@ body {
     height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
-    
+
 }
 
 
@@ -92,8 +92,8 @@ body {
 }
 
 .foreground {
+    top: calc(10vh * 12);
     transform: translateZ(-5px) scale(1.6);
-    top: 300px;
 }
 
 .svg_login {
@@ -102,9 +102,9 @@ body {
 }
 
 .header__section {
-    width: 70%;
-    min-width: 70vw;
-    margin: 0  auto;
+
+    max-width: 70rem;
+    margin: 0 auto;
     display: flex;
     justify-content: start;
     flex-direction: column;
@@ -125,3 +125,48 @@ body {
 .guide {
     color: var(--thirds__color);
 }
+
+.main {
+    height: 200vh;
+    background-color: var(--fourth__color);
+}
+
+span,h2 {
+    color: var(--main__color);
+
+}
+
+.main__section {
+margin-top: 10rem;
+position: relative;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.main__section>div {
+padding: 20px;
+}
+
+.main__text {
+    margin-top: 50px;
+    max-width: 30rem;
+}
+
+.main__section__numbers {
+    position: absolute;
+    opacity: .1;
+    font-size: 9em;
+    inset: 0;
+}
+
+.main__section__02 {
+    flex-direction: row-reverse;
+}
+
+.footer {
+    height: 200vh;
+    background-color: var(--fourth__color);
+}
+
+
+
