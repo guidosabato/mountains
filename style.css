@@ -1,8 +1,10 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
- }
+}
 
 
 :root {
@@ -20,7 +22,9 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-a, span, h2{
+a,
+span,
+h2 {
     text-decoration: none;
     color: var(--main__color);
 }
@@ -70,7 +74,7 @@ a, span, h2{
 }
 
 .cielo {
-    transform: translateZ(-20px) scale(3); 
+    transform: translateZ(-20px) scale(3);
 }
 
 .background {
@@ -83,6 +87,7 @@ a, span, h2{
     top: calc(10vh * 12);
     transform: translateZ(-5px) scale(1.6);
 }
+
 .background,
 .foreground,
 .cielo {
@@ -91,6 +96,7 @@ a, span, h2{
     width: 100%;
     object-fit: cover;
 }
+
 .svg_login {
     width: 10px;
     fill: var(--main__color);
@@ -101,11 +107,11 @@ a, span, h2{
     display: flex;
     justify-content: start;
     flex-direction: column;
-    gap: 70px;
     max-width: 70rem;
     color: var(--second__color);
     font-size: 2em;
 }
+
 .header img {
     min-width: 100%;
     min-height: 100%;
@@ -128,43 +134,46 @@ a, span, h2{
 
 
 .main__section {
-margin-top: 10rem;
-position: relative;
-flex-wrap: wrap;
-justify-content: center;
+    margin-top: 10rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
 }
 
 .main__section>div {
-padding: 20px;
+    padding: 80px;
 }
 
 .main__text {
-    margin-top: 50px;
-    max-width: 30rem;
-}
-
-.main__section__numbers {
-    position: absolute;
-    opacity: .1;
-    font-size: 9em;
-    inset: 0;
+    position: relative;
+    align-items: center;
+    max-width: 40rem;
 }
 
 .main__section__02 {
     flex-direction: row-reverse;
 }
 
+.main__section__numbers {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    opacity: .1;
+    font-size: 11em;
+
+}
+
+
 .footer {
     margin-top: 200px;
     justify-content: space-around;
     height: 50vh;
     background-color: var(--fourth__color);
-    color: var(--thirds__color);  
+    color: var(--thirds__color);
 }
+
 .footer__section {
     flex-direction: column;
     justify-content: center;
-    max-width:200px;
+    max-width: 200px;
 }
-
-
