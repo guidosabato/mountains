@@ -1,11 +1,8 @@
-* {
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    vertical-align: baseline;
-}
-
+ }
 
 
 :root {
@@ -17,12 +14,10 @@
 
 html {
     background-color: var(--fourth__color);
-    display: block;
 }
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 100vw;
 }
 
 a, span, h2{
@@ -93,7 +88,7 @@ a, span, h2{
 .cielo {
     position: absolute;
     z-index: -3;
-    width: 100vw;
+    width: 100%;
     object-fit: cover;
 }
 .svg_login {
